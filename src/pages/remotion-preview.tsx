@@ -13,9 +13,9 @@ const Preview: React.FC = () => {
   const { githubData } = useContext(GitHubDataContext);
   const [isDownloading, setIsDownloading] = useState(false);
 
-  if (!githubData) {
-    return <div>Loading... Please go back and enter your GitHub username!</div>;
-  }
+  // if (!githubData) {
+  //   return <div>Loading... Please go back and enter your GitHub username!</div>;
+  // }
 
   // Function to handle video download
   const handleDownload = async () => {
@@ -79,7 +79,7 @@ const Preview: React.FC = () => {
           component={MyComposition}
           compositionWidth={720}
           compositionHeight={1280}
-          durationInFrames={1350}
+          durationInFrames={750}
           fps={30}
           controls
           inputProps={{ githubData }}

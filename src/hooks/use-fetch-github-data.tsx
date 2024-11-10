@@ -75,7 +75,7 @@ const useFetchGitHubData = () => {
         repoWithMostStars,
         topLanguages,
       };
-      setGitHubData(fetchedData);
+      setGitHubData(() => fetchedData);
 
       // Show success notification
       notification.success({
