@@ -10,7 +10,7 @@ createRoot(document.getElementById('root')!).render(
     theme={{
       token: {
         // Seed Token
-        fontFamily: 'Source Sans 3, sans-serif',
+        fontFamily: 'PrimaryFont, sans-serif',
         colorPrimary: '#007ACC',
         borderRadius: 2,
         

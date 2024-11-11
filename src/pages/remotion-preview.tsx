@@ -10,12 +10,32 @@ import { DownloadOutlined, SmileOutlined, LikeOutlined, StarOutlined, PlayCircle
 import { motion } from 'framer-motion';
 
 const Preview: React.FC = () => {
-  const { githubData } = useContext(GitHubDataContext);
+  const { gitHubData: githubData } = useContext(GitHubDataContext);
   const [isDownloading, setIsDownloading] = useState(false);
 
-  // if (!githubData) {
-  //   return <div>Loading... Please go back and enter your GitHub username!</div>;
-  // }
+ 
+
+  if (!githubData) {
+    return (
+      <div className="flex flex-col items-center justify-center min-h-screen bg-gradient-to-br from-red-500 via-red-600 to-red-700 p-4 text-white">
+        <div className="text-6xl mb-4">
+          <SmileOutlined />
+        </div>
+        <div className="text-2xl font-bold mb-2">Oops! Something went wrong.</div>
+        <div className="text-lg mb-4">Please go back and enter your GitHub username!</div>
+        <Button
+          type="danger"
+          icon={<PlayCircleOutlined />}
+          onClick={() => window.location.href = '/'}
+          className="bg-white text-red-700 font-semibold px-6"
+          style={{ borderRadius: '8px' }}
+          variant='outlined'
+        >
+          Go Back
+        </Button>
+      </div>
+    );
+  }
 
   // Function to handle video download
   const handleDownload = async () => {
