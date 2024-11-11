@@ -42,7 +42,7 @@ export default function GitHubUnwrapped() {
       {userName ? (
         // Show video generation page if username is provided
         <>
-          <h1 className="text-4xl md:text-5xl font-bold text-center mb-12 text-primary">GitHub Unwrapped 2024 🎶</h1>
+          <h1 className="text-4xl md:text-4xl font-semibold text-center mb-12 text-primary">GitHub Unwrapped 2024 🎶</h1>
 
           <div className="flex flex-col items-center w-full max-w-3xl text-center">
             <p className="text-lg md:text-xl text-gray-700 mb-8">
@@ -76,7 +76,7 @@ export default function GitHubUnwrapped() {
           whileHover={{ scale: 1.02 }}
         >
           <h2 className="text-center text-4xl font-bold mb-6 text-primary flex justify-center items-center gap-3">
-            Welcome to GitHub Fun Analyzer! 🚀
+            {'GitHub Unwrapped 2024'}🚀
           </h2>
           <Form  layout="vertical" onFinish={handleSubmit}>
             <Form.Item
@@ -107,6 +107,10 @@ export default function GitHubUnwrapped() {
               </Form.Item>
             </motion.div>
           </Form>
+
+            <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 text-center">
+            <p className="text-sm text-gray-500">GitHub Unwrapped by GitScape</p>
+            </div>
         </motion.div>
       )}
     </div>
